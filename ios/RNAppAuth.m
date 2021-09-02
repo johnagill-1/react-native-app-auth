@@ -298,10 +298,10 @@ RCT_REMAP_METHOD(refresh,
 
     // performs authentication request
     id<UIApplicationDelegate, RNAppAuthAuthorizationFlowManager> appDelegate = (id<UIApplicationDelegate, RNAppAuthAuthorizationFlowManager>)[UIApplication sharedApplication].delegate;
-    if (![[appDelegate class] conformsToProtocol:@protocol(RNAppAuthAuthorizationFlowManager)]) {
-        [NSException raise:@"RNAppAuth Missing protocol conformance"
-                    format:@"%@ does not conform to RNAppAuthAuthorizationFlowManager", appDelegate];
-    }
+//    if (![[appDelegate class] conformsToProtocol:@protocol(RNAppAuthAuthorizationFlowManager)]) {
+//        [NSException raise:@"RNAppAuth Missing protocol conformance"
+//                    format:@"%@ does not conform to RNAppAuthAuthorizationFlowManager", appDelegate];
+//    }
     appDelegate.authorizationFlowManagerDelegate = self;
     __weak typeof(self) weakSelf = self;
 
